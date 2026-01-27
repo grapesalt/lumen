@@ -1,0 +1,12 @@
+[package]
+name = "lumen"
+authors = ["Aditya Chaturvedi"]
+license = "Apache-2.0"
+version = "0.1.0"
+edition = "2024"
+description = "A fast and minimal syntax highlighting library"
+repository = "https://github.com/grapesalt/lumen"
+
+[dependencies]
+logos = "0.16"
+lumen_derive = { path = "./lumen_derive" }
