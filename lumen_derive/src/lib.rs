@@ -1,6 +1,6 @@
 use proc_macro::TokenStream;
 use quote::quote;
-use syn::{Attribute, Data, DeriveInput, Fields, Meta, parse_macro_input};
+use syn::{parse_macro_input, Attribute, Data, DeriveInput, Fields, Meta};
 
 #[proc_macro_attribute]
 pub fn lumen_token(attr: TokenStream, item: TokenStream) -> TokenStream {
@@ -59,8 +59,6 @@ pub fn derive_lumen_language(input: TokenStream) -> TokenStream {
                 let kind = match self {
                     #(#match_arms)*
                 };
-                // We can't get the span here, so we return a dummy token
-                // The actual span is handled in the highlight function
                 crate::token::Token::new(kind, 0..0)
             }
         }

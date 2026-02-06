@@ -6,6 +6,7 @@ pub enum TokenKind {
     Type,
     Function,
     Variable,
+    Identifier,
     Constant,
     String,
     Char,
